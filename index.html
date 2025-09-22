@@ -4,18 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div id="userSelection" class="user-selection">
+        <div class="user-selection-content">
+            <h1>Who's shopping?</h1>
+            <div class="user-grid">
+                <button class="user-button" data-user="Dad">
+                    <div class="user-avatar">👨</div>
+                    <span>Dad</span>
+                </button>
+                <button class="user-button" data-user="Mom">
+                    <div class="user-avatar">👩</div>
+                    <span>Mom</span>
+                </button>
+                <button class="user-button" data-user="Declan">
+                    <div class="user-avatar">👦</div>
+                    <span>Declan</span>
+                </button>
+                <button class="user-button" data-user="Leia">
+                    <div class="user-avatar">👧</div>
+                    <span>Leia</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="appContainer" style="display: none;">
         <header>
             <h1>🛒 Shopping List</h1>
+            <div class="user-info">
+                <div class="current-user-display">
+                    <div id="currentUserAvatar" class="current-user-avatar"></div>
+                    <span id="currentUser"></span>
+                </div>
+                <button id="switchUser" class="switch-user-btn">Switch User</button>
+            </div>
         </header>
 
         <main>
             <div class="add-item">
                 <input type="text" id="itemInput" placeholder="Add new item..." autocomplete="off">
                 <button id="addBtn">Add</button>
+            </div>
+
+            <div class="sort-controls">
+                <button id="sortAlpha" class="sort-btn">📝 A-Z</button>
+                <button id="sortDate" class="sort-btn">🕒 Date</button>
             </div>
 
             <ul id="shoppingList" class="shopping-list">

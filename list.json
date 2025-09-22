@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1758558680213,
+        "text": "beer",
+        "completed": false,
+        "addedBy": "Dad",
+        "addedAt": 1758558679
+    },
+    {
+        "id": 1758558687684,
+        "text": "ice",
+        "completed": false,
+        "addedBy": "Mom",
+        "addedAt": 1758558686
+    },
+    {
+        "id": 1758558706437,
+        "text": "candy",
+        "completed": false,
+        "addedBy": "Dad",
+        "addedAt": 1758558705
+    },
+    {
+        "id": 1758558706362,
+        "text": "candy",
+        "completed": false,
+        "addedBy": "Mom",
+        "addedAt": 1758558705
+    },
+    {
+        "id": 1758558706441,
+        "text": "candy",
+        "completed": false,
+        "addedBy": "Leia",
+        "addedAt": 1758558705
+    }
+]
