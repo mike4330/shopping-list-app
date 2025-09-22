@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛒 Shopping List</h1>
+        </header>
+
+        <main>
+            <div class="add-item">
+                <input type="text" id="itemInput" placeholder="Add new item..." autocomplete="off">
+                <button id="addBtn">Add</button>
+            </div>
+
+            <ul id="shoppingList" class="shopping-list">
+            </ul>
+
+            <div class="stats">
+                <span id="itemCount">0 items</span>
+                <button id="clearBtn" class="clear-btn">Clear All</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

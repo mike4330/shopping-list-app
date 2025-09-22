@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+main {
+    padding: 30px 20px;
+}
+
+.add-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#itemInput {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#itemInput:focus {
+    border-color: #667eea;
+}
+
+#addBtn {
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#addBtn:hover {
+    transform: translateY(-2px);
+}
+
+#addBtn:active {
+    transform: translateY(0);
+}
+
+.shopping-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.shopping-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.shopping-item:hover {
+    background: #f1f5f9;
+    transform: translateX(5px);
+}
+
+.shopping-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.item-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    accent-color: #667eea;
+    cursor: pointer;
+}
+
+.item-text {
+    flex: 1;
+    font-size: 16px;
+    color: #334155;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+#itemCount {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.clear-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover {
+    background: #dc2626;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #64748b;
+}
+
+.empty-state p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.empty-state span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        margin: 0;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    #itemInput, #addBtn {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
