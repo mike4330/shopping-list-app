@@ -48,6 +48,8 @@ switch ($method) {
                         break;
                     }
                 }
+            } elseif ($input['action'] === 'clear_all') {
+                $items = [];
             }
         }
 

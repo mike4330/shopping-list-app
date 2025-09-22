@@ -204,8 +204,18 @@ class ShoppingList {
         if (this.items.length === 0) return;
 
         if (confirm('Are you sure you want to clear all items?')) {
-            for (const item of this.items) {
-                await this.deleteItem(item.id);
+            try {
+                const response = await fetch('api.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'clear_all' })
+                });
+                this.items = await response.json();
+                this.render();
+            } catch (error) {
+                console.error('Error clearing items:', error);
+                // Fallback: reload items from server
+                this.loadItems();
             }
         }
     }
